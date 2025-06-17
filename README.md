@@ -1,6 +1,4 @@
 # tic-tac-toe
 
-this is a project from CS50's Introduction to Artificial Intelligence with Python course
-I did not made the code for runner.py file
-the only code I wrote is in tictactoe.py file(Not finished yet)
+This repository contains weekly projects from Harvard's CS50 Introduction to Artificial Intelligence with Python course. The projects include starter code, so they are not entirely my own work.
 
