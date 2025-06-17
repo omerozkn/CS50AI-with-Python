@@ -21,23 +21,18 @@ def player(board):
     """
     Returns player who has the next turn on a board.
     """
-    x=0
-    o=0
-    """
-    for row in board :
-        for cell in row :
-            if row == X :
-                x +=1
-    """        
-    x = sum(1 for row in board for cell in row if row == X)
+    # Count X’s and O’s
+    x = sum(row.count(X) for row in board)
+    o = sum(row.count(O) for row in board)
 
+    # X moves first and whenever X’s count is not greater than O’s 
     return X if x<=o else O
 
 def actions(board):
     """
     Returns set of all possible actions (i, j) available on the board.
     """
-    raise NotImplementedError
+    
 
 
 def result(board, action):
