@@ -21,11 +21,17 @@ def player(board):
     """
     Returns player who has the next turn on a board.
     """
-    if board == initial_state():
-        return X
-    
-        
+    x=0
+    o=0
+    """
+    for row in board :
+        for cell in row :
+            if row == X :
+                x +=1
+    """        
+    x = sum(1 for row in board for cell in row if row == X)
 
+    return X if x<=o else O
 
 def actions(board):
     """
