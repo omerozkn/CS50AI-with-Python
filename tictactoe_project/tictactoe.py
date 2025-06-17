@@ -32,7 +32,14 @@ def actions(board):
     """
     Returns set of all possible actions (i, j) available on the board.
     """
-    
+    if terminal(board):
+        return set()
+    possible_actions = set()
+    #loop through all cells and if it's a empty cells return a tuple (i, j) of its location
+    for row in board:
+        for cell in row:
+            if cell is EMPTY:
+                
 
 
 def result(board, action):

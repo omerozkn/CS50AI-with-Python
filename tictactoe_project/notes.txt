@@ -2,3 +2,15 @@
 #The player function should take a board state as input, and return which player’s turn it is (either X or O).
 #In the initial game state, X gets the first move. Subsequently, the player alternates with each additional move.
 #Any return value is acceptable if a terminal board is provided as input (i.e., the game is already over).
+
+----> how to program actions(board)
+#Returns set of all possible actions (i, j) available on the board.
+#The actions function should return a set of all of the possible actions that can be taken on a given board.
+#Each action should be represented as a tuple (i, j) where i corresponds to the row of the move (0, 1, or 2) and j corresponds to which cell 
+in the row corresponds to the move (also 0, 1, or 2).
+#Possible moves are any cells on the board that do not already have an X or an O in them.
+#Any return value is acceptable if a terminal board is provided as input.
+-->how can I implement this?
+# first check if the game is over
+# create a empty set for all the possible actions
+#program needs to look for evry cells in the borad and if the cell is empty it should add a tuple (i, j) to the set of possible actions
