@@ -36,18 +36,18 @@ def actions(board):
         return set()
     possible_actions = set()
     #loop through all cells and if it's a empty cells return a tuple (i, j) of its location
-    for row in board:
-        for cell in row:
+    for row_index, row in enumerate(board):
+        for cell_index, cell in enumerate(row):
             if cell is EMPTY:
-                
+                possible_actions.add((row_index, cell_index))
+    return possible_actions            
 
 
 def result(board, action):
     """
     Returns the board that results from making move (i, j) on the board.
     """
-    raise NotImplementedError
-
+    
 
 def winner(board):
     """
