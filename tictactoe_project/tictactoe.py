@@ -21,7 +21,11 @@ def player(board):
     """
     Returns player who has the next turn on a board.
     """
-    raise NotImplementedError
+    if board == initial_state():
+        return X
+    
+        
+
 
 def actions(board):
     """
