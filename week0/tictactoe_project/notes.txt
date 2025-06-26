@@ -19,9 +19,15 @@ in the row corresponds to the move (also 0, 1, or 2).
 #Returns the board that results from making move (i, j) on the board.
 #The result function takes a board and an action as input, and should return a new board state, without modifying the original board.
 #If action is not a valid action for the board, your program should raise an exception.
-#The returned board state should be the board that would result from taking the original input board, and letting the player whose turn it is make their move at the cell indicated by the input action.
-#Importantly, the original board should be left unmodified: since Minimax will ultimately require considering many different board states during its computation.
+#The returned board state should be the board that would result from taking the original input board, and letting the player whose turn it is
+make their move at the cell indicated by the input action.
+#Importantly, the original board should be left unmodified: since Minimax will ultimately require considering many different board states during 
+its computation.
 This means that simply updating a cell in board itself is not a correct implementation of the result function. 
 You’ll likely want to make a deep copy of the board first before making any changes.
 -->how can I implement this?
-First, we need to make a deep copy of the board; we need the original board to remain unchanged.
+-First, we need to make a deep copy of the board; we need the original board to remain unchanged. 
+-find out which player's turn with player(board) function
+-loop trough the copy of the given borad and add the action if the location is same as the given action's location context
+-if action is not valid(already has a X or O symbol) raise an exception  if it's valid retun the new board
+-
