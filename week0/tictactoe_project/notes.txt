@@ -29,10 +29,22 @@ make their move at the cell indicated by the input action.
 its computation.
 #This means that simply updating a cell in board itself is not a correct implementation of the result function. 
 #You’ll likely want to make a deep copy of the board first before making any changes.
-
 --> Steps to implement:
 1. Make a deep copy of the board to avoid modifying the original.
 2. Use player(board) to determine whose turn it is (X or O).
 3. Validate the action: raise an Exception if the cell is already occupied or the action is illegal.
 4. Apply the move to the copied board at the specified row and column.
 5. Return the modified copy as the new board state.
+
+---->how to program result
+#The winner function should accept a board as input, and return the winner of the board if there is one.
+#If the X player has won the game, your function should return X. If the O player has won the game, your function should return O.
+#One can win the game with three of their moves in a row horizontally, vertically, or diagonally.
+#You may assume that there will be at most one winner (that is, no board will ever have both players with three-in-a-row, since that would be an invalid board state).
+#If there is no winner of the game (either because the game is in progress, or because it ended in a tie), the function should return None.
+--> Steps to implement:
+1.
+2.
+3.
+4.
+
