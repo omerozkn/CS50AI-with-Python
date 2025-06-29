@@ -71,19 +71,24 @@ def winner(board):
     """
     Returns the winner of the game, if there is one.
     """
-    # check board horizontally, vertically and diagonally(for checking use loop and indexes and use a separate loop for each one.) 
-    # if there is consecutively 3 X or O return the winner player
+    # Check board horizontally, vertically and diagonally(for checking use loop and indexes and use a separate loop for each one.) 
+    # If there is consecutively 3 X or O return the winner player
+
     # Check each row
     board_length = len(board)
     for r in range(board_length):
-        if board[r][0]==board[r][1]==board[r][2] != EMPTY:
-            return board[r][0]
-        
+        first_cell = board[r][0]
+        if first_cell is not EMPTY:
+            # Confirm every cell in row r equals to the first cell
+            if all(board[r][c] == first_cell for c in range(board_length)):
+                return first_cell
     # Check each column
     for c in range(board_length):
-        if board[0][c]==board[1][c]==board[2][c] != EMPTY:
-            return board[0][c]
-        
+        first_cell = board[0][c]
+        if first_cell is not EMPTY:
+            # Confirm every cell in column c equals to the first cell
+            if all(board[r][c] == first_cell  for r in range(board_length)):
+                return first_cell
     # Check the two diagonals
     # Check the diagonal from top-left to bottom-right
     if all(board[i][i]== board[0][0] != EMPTY for i in range(board_length)):
@@ -93,7 +98,7 @@ def winner(board):
     if all(board[i][board_length - 1 - i] == board[0][board_length - 1] != EMPTY for  i in range(board_length)):
         return board[0][board_length - 1]
     
-    # if there is no winner(either because the game is in progress, or because it ended in a tie) return None
+    # If there is no winner(either because the game is in progress, or because it ended in a tie) return None
     return None
 
 def terminal(board):

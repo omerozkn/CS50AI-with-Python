@@ -44,7 +44,7 @@ its computation.
 #You may assume that there will be at most one winner (that is, no board will ever have both players with three-in-a-row, since that would be an invalid board state).
 #If there is no winner of the game (either because the game is in progress, or because it ended in a tie), the function should return None.
 --> Steps to implement:
-1.check board horizontally, vertically and diagonally(for checking use loop and indexs and use a separete loop for each one.) if there is consecutively 3 X or O return t-
+1.check board horizontally, vertically and diagonally(for checking use loop and indexes and use a separete loop for each one.) if there is consecutively 3 X or O return t-
 he winner player
 2.if there is no winner(either because the game is in progress, or because it ended in a tie) return None
 4.
