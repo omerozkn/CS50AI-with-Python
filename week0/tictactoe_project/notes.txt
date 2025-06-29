@@ -36,15 +36,16 @@ its computation.
 4. Apply the move to the copied board at the specified row and column.
 5. Return the modified copy as the new board state.
 
----->how to program result
+---->how to program winner(board):
+-->Requirements
 #The winner function should accept a board as input, and return the winner of the board if there is one.
 #If the X player has won the game, your function should return X. If the O player has won the game, your function should return O.
 #One can win the game with three of their moves in a row horizontally, vertically, or diagonally.
 #You may assume that there will be at most one winner (that is, no board will ever have both players with three-in-a-row, since that would be an invalid board state).
 #If there is no winner of the game (either because the game is in progress, or because it ended in a tie), the function should return None.
 --> Steps to implement:
-1.
-2.
-3.
+1.check board horizontally, vertically and diagonally(for checking use loop and indexs and use a separete loop for each one.) if there is consecutively 3 X or O return t-
+he winner player
+2.if there is no winner(either because the game is in progress, or because it ended in a tie) return None
 4.
 
