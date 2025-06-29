@@ -47,9 +47,22 @@ def result(board, action):
     """
     Returns the board that results from making move (i, j) on the board.
     """
+    # Before modifying anything, check that the target cell is empty.If the action is not valid (i.e., the cell already has an X or O) raise an exception 
+    if action not in actions(board):
+        raise Exception("Invalid action")
+    
     row, col = action
-    
-    
+    #make a deep copy of the board; we need the original board to remain unchanged. 
+    copy_board = [r.copy() for r in board]
+
+   # Find out which player's turn it is using the player(board) function.
+    current_player = player(board)
+
+    # Add X or O (depending on whose turn it is) to the action location on the copied board, and return the new board.
+    #(to look at the target location at borad use row and col numbers)
+    copy_board[row][col] =current_player
+    return copy_board
+
 
 def winner(board):
     """

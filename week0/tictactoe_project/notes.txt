@@ -29,5 +29,5 @@ You’ll likely want to make a deep copy of the board first before making any ch
 -First, we need to make a deep copy of the board; we need the original board to remain unchanged. 
 -find out which player's turn with player(board) function
 -Before modifying anything, check that the target cell is empty.if action is not valid(already has a X or O symbol) raise an exception  
-if it's valid retun the new board(to look at the target location at borad use row and col numbers)
+if it's valid add the action to the copy board and retun the new board(to look at the target location at borad use row and col numbers)
 -
