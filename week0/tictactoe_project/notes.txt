@@ -28,6 +28,6 @@ You’ll likely want to make a deep copy of the board first before making any ch
 -->how can I implement this?
 -First, we need to make a deep copy of the board; we need the original board to remain unchanged. 
 -find out which player's turn with player(board) function
--loop trough the copy of the given borad and add the action if the location is same as the given action's location context
--if action is not valid(already has a X or O symbol) raise an exception  if it's valid retun the new board
+-Before modifying anything, check that the target cell is empty.if action is not valid(already has a X or O symbol) raise an exception  
+if it's valid retun the new board(to look at the target location at borad use row and col numbers)
 -
